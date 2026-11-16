@@ -14,7 +14,7 @@ export default function Footer() {
           <p className="footer-address"><MapPin size={15} />403, Padmavathi Residency Block-A<br />Lahari Green Park<br />Hyderabad - 500089</p>
         </div>
         <div className="footer-links">
-          <p className="footer-label">Explore</p>
+          <p className="footer-label">Explore Links</p>
           <Link to="/#services">Services <ArrowUpRight size={13} /></Link>
           <Link to="/#technologies">Technologies <ArrowUpRight size={13} /></Link>
           <Link to="/#work">Our Work <ArrowUpRight size={13} /></Link>

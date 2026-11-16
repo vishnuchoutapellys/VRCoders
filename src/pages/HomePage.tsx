@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {
   aiCapabilities,
   clients,
+  leadership,
   processSteps,
   reasons,
   services,
@@ -167,6 +168,29 @@ export default function HomePage() {
           </Reveal>
           <div className="reason-list">
             {reasons.map((reason, index) => <Reveal key={reason} delay={index * 0.05}><div className="reason-item"><span className="reason-icon"><Check size={15} /></span><span>{reason}</span><span className="reason-number">0{index + 1}</span></div></Reveal>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad leadership-section" aria-label="VR Coders leadership team">
+        <div className="container">
+          <Reveal>
+            <SectionHeading
+              eyebrow="The people behind the work"
+              title="Leadership with a builder’s mindset."
+              description="Meet the team guiding our work and helping businesses turn technology into progress."
+            />
+          </Reveal>
+          <div className="leadership-grid">
+            {leadership.map((person, index) => (
+              <Reveal key={person.name} delay={index * 0.08}>
+                <article className="leadership-card">
+                  <span className="leadership-number" aria-hidden="true">0{index + 1}</span>
+                  <h3>{person.name}</h3>
+                  <p>{person.role}</p>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

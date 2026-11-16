@@ -54,7 +54,7 @@ export const technologyGroups = [
   { name: "Backend", technologies: ["Node.js", "Python", "PHP"] },
   { name: "Mobile", technologies: ["Flutter", "React Native", "Android", "iOS"] },
   { name: "Database", technologies: ["PostgreSQL", "MySQL", "SQL Server"] },
-  { name: "AI", technologies: ["Generative AI", "LLM", "RAG", "AI Agents"] },
+  // { name: "AI", technologies: ["Generative AI", "LLM", "RAG", "AI Agents"] },
 ];
 
 export const processSteps = ["Discover", "Design", "Build", "Test", "Launch", "Support"];
@@ -66,6 +66,12 @@ export const reasons = [
   "Quality First",
   "Transparent Communication",
   "Long-Term Support",
+];
+
+export const leadership = [
+  { name: "Vishnu Choutapelly", role: "Founder & CEO" },
+  { name: "Tadepu Krishna", role: "Co-Founder & COO" },
+  { name: "Narayan Dath Vyas", role: "Co-Founder & CTO" },
 ];
 
 export const supportServices = [
