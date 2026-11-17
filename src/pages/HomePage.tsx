@@ -1,6 +1,7 @@
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, Sparkles } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
+import aiLogo from "../assets/AI.png";
 import {
   aiCapabilities,
   clients,
@@ -115,7 +116,7 @@ export default function HomePage() {
           <Reveal delay={0.12}>
             <div className="ai-visual">
               <div className="ai-lines" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div>
-              <div className="ai-center"><span className="ai-center-icon">✳</span><span>Applied AI</span></div>
+              <div className="ai-center"><img className="ai-center-logo" src={aiLogo} alt="VR Coders AI" /></div>
               {aiCapabilities.map((capability, index) => <div className={`ai-node ai-node--${index + 1}`} key={capability}><span />{capability}</div>)}
               <div className="ai-visual-note">BUILT AROUND YOUR BUSINESS</div>
             </div>

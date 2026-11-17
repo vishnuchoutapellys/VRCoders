@@ -163,7 +163,8 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .ai-visual::before, .ai-visual::after { position: absolute; content: ""; border: 1px solid rgba(162, 175, 255, .11); border-radius: 50%; }
 .ai-visual::before { width: 240px; height: 240px; }
 .ai-visual::after { width: 340px; height: 340px; }
-.ai-center { z-index: 2; display: flex; width: 102px; height: 102px; flex-direction: column; align-items: center; justify-content: center; gap: 7px; border: 1px solid rgba(174, 185, 255, .44); border-radius: 50%; background: linear-gradient(140deg, #1a2040, #111626); box-shadow: 0 0 54px rgba(119, 136, 252, .2); color: #e4e7ff; font-size: 10px; }
+.ai-center { z-index: 2; display: flex; width: 50px; height: 50px; align-items: center; justify-content: center; overflow: hidden; border: 1px solid rgba(174, 185, 255, .44); border-radius: 50%; background: #fff; box-shadow: 0 0 34px rgba(119, 136, 252, .18); }
+.ai-center-logo { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 .ai-center-icon { color: #aebaff; font-size: 26px; line-height: 1; }
 .ai-node { position: absolute; z-index: 2; display: flex; align-items: center; gap: 7px; border: 1px solid rgba(181, 190, 255, .18); border-radius: 4px; padding: 9px 11px; background: #101320; color: #d2d5e0; font-size: 10px; animation: node-bob 5s ease-in-out infinite; }
 .ai-node span { width: 5px; height: 5px; border-radius: 50%; background: #9eacff; box-shadow: 0 0 9px #9eacff; }
@@ -508,7 +509,7 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .services-grid > div:nth-child(4n) .service-icon { border-color: rgba(255, 198, 217, .25); color: var(--pastel-rose); background: rgba(255, 198, 217, .08); }
 .ai-section { background: radial-gradient(ellipse at 74% 50%, rgba(195, 179, 246, .1), transparent 45%), #10111b; }
 .ai-visual { border-color: rgba(216, 202, 249, .18); background: radial-gradient(ellipse at center, rgba(197, 182, 244, .12), rgba(17, 18, 30, .72) 58%, rgba(12,13,21,.55)); }
-.ai-center { border-color: rgba(220, 207, 255, .56); background: linear-gradient(140deg, #332e49, #1a1b2b); box-shadow: 0 0 54px rgba(201, 183, 255, .19); }
+.ai-center { border-color: rgba(220, 207, 255, .56); background: #fff; box-shadow: 0 0 34px rgba(201, 183, 255, .22); }
 .ai-center-icon { color: #ded0ff; }
 .ai-node span { background-color: #ded0ff; }
 .ai-node--2 span { background-color: var(--pastel-blue); }
