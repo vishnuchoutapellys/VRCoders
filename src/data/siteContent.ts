@@ -14,14 +14,15 @@ import nsrLogo from "../assets/client-nsr.webp";
 import rudraSolarLogo from "../assets/client-rudra.webp";
 import weddingLogo from "../assets/client-wedding.webp";
 import primaSoftLogo from "../assets/client-primasoft.webp";
+import gprLogo from "../assets/GPR.png";
 import vishnuPortrait from "../assets/vishnu.jpeg";
 import krishnaPortrait from "../assets/krishna.jpeg";
 import vyasPortrait from "../assets/vyas.jpeg";
 
 export const clients = [
   { name: "NSR Impulse", logo: nsrLogo },
-  { name: "Rudra Solar", logo: rudraSolarLogo },
-  { name: "GPR Cultural Committee" },
+  { name: "Rudra Solar", logo: rudraSolarLogo, logoSurface: "solar" },
+  { name: "GPR Cultural Committee", logo: gprLogo, logoSurface: "gpr" },
   { name: "Wedding.com", logo: weddingLogo },
   { name: "PrimaSoft", logo: primaSoftLogo },
 ];

@@ -83,7 +83,7 @@ export default function HomePage() {
               {[false, true].map((clone) => (
                 <ul className="client-marquee-group" key={String(clone)} aria-hidden={clone || undefined}>
                   {clients.map((client) => (
-                    <li className="client-card" key={client.name}>
+                    <li className={`client-card${client.logoSurface ? ` client-card--${client.logoSurface}` : ""}`} key={client.name}>
                       {client.logo ? (
                         <img className="client-logo" src={client.logo} alt={client.name} />
                       ) : (
@@ -129,7 +129,7 @@ export default function HomePage() {
           <div className="tech-grid">
             {technologyGroups.map((group, groupIndex) => (
               <Reveal key={group.name} delay={groupIndex * 0.05}>
-                <div className="tech-group"><h3>{group.name}</h3><div className="tech-badges">{group.technologies.map((technology, badgeIndex) => <motion.span key={technology} className="tech-badge" whileHover={reduceMotion ? undefined : { y: -3, borderColor: "rgba(151,168,255,.55)" }} transition={{ duration: 0.18, delay: badgeIndex * 0.015 }}>{technology}</motion.span>)}</div></div>
+                <div className="tech-group"><h3>{group.name}</h3><div className="tech-badges">{group.technologies.map((technology, badgeIndex) => <motion.span key={technology} className="tech-badge" whileHover={reduceMotion ? undefined : { y: -2, color: "#ffffff" }} transition={{ duration: 0.18, delay: badgeIndex * 0.015 }}><span className="tech-dot" aria-hidden="true" />{technology}</motion.span>)}</div></div>
               </Reveal>
             ))}
           </div>
