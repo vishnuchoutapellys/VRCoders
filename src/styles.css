@@ -206,11 +206,15 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .reason-number { margin-left: auto; color: #747b8e; font-size: 9px; }
 .leadership-section { border-top: 1px solid var(--line); background: #090b12; }
 .leadership-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.leadership-card { position: relative; min-height: 158px; overflow: hidden; border: 1px solid var(--line); border-radius: 6px; padding: 26px 23px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); transition: transform .22s ease, border-color .22s ease, background .22s ease; }
+.leadership-card { display: grid; min-height: 0; grid-template-columns: minmax(0, 1fr) 112px; align-items: start; gap: 14px; border: 1px solid var(--line); border-radius: 6px; padding: 18px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); transition: transform .22s ease, border-color .22s ease, background .22s ease; }
 .leadership-card:hover { transform: translateY(-3px); border-color: rgba(213, 198, 255, .4); background: linear-gradient(145deg, rgba(205, 191, 255, .075), rgba(255,255,255,.01)); }
+.leadership-copy { min-width: 0; }
+.leadership-profile { display: flex; min-width: 0; flex-direction: column; align-items: center; gap: 10px; }
+.leadership-portrait { display: block; width: 76px; height: 76px; flex: 0 0 auto; border: 2px solid rgba(213, 198, 255, .38); border-radius: 50%; object-fit: cover; object-position: center; box-shadow: 0 0 0 5px rgba(205, 191, 255, .06); }
 .leadership-number { display: inline-flex; min-width: 30px; height: 26px; align-items: center; justify-content: center; border: 1px solid rgba(213, 198, 255, .22); border-radius: 4px; color: #d7caff; font-size: 9px; letter-spacing: .1em; }
-.leadership-card h3 { margin: 24px 0 6px; color: #f0edf5; font-size: clamp(15px, 1.6vw, 19px); font-weight: 600; letter-spacing: -.025em; }
-.leadership-card p { margin: 0; color: #c1bbcf; font-size: 12px; line-height: 1.6; }
+.leadership-card h3 { margin: 0 0 10px; color: #f0edf5; font-size: clamp(14px, 1.45vw, 18px); font-weight: 600; letter-spacing: -.025em; line-height: 1.25; }
+.leadership-description { margin: 0; color: #c1bbcf; font-size: 11px; line-height: 1.55; }
+.leadership-role { width: max-content; max-width: none; margin: 0; color: #d7caff; font-size: 9px; font-weight: 600; line-height: 1.35; text-align: center; white-space: nowrap; }
 .support-section { border-top: 1px solid var(--line); background: #090b12; }
 .support-layout { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: 100px; }
 .support-list { border-top: 1px solid var(--line); }
@@ -292,6 +296,7 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
   .desktop-nav a { font-size: 10px; }
   .nav-shell { width: calc(100% - 25px); gap: 16px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .leadership-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .clients-section .container { grid-template-columns: 1fr; gap: 30px; }
   .ai-layout, .why-layout, .support-layout { gap: 50px; }
 }
@@ -395,8 +400,12 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
   .work-placeholder { margin-top: 22px; padding: 16px 0; font-size: 8px; }
   .why-section h2 { font-size: clamp(32px, 9vw, 36px); line-height: 1.08; }
   .leadership-grid { grid-template-columns: 1fr; gap: 10px; }
-  .leadership-card { min-height: 0; padding: 19px; }
-  .leadership-card h3 { margin-top: 16px; font-size: 16px; }
+  .leadership-card { grid-template-columns: minmax(0, 1fr) 106px; gap: 10px; padding: 15px; }
+  .leadership-profile { gap: 8px; }
+  .leadership-portrait { width: 68px; height: 68px; }
+  .leadership-card h3 { margin-bottom: 8px; font-size: 15px; }
+  .leadership-description { font-size: 10px; line-height: 1.45; }
+  .leadership-role { font-size: 8px; }
   .reason-item { font-size: 12px; }
   .support-item { gap: 12px; font-size: 11px; }
   .final-cta-inner { padding-top: 42px; padding-bottom: 44px; }
@@ -452,7 +461,8 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .why-section h2 span,
 .support-section h2 span,
 .final-cta h2 span,
-.contact-heading h1 span {
+.contact-heading h1 span,
+.leadership-card h3 {
   background: linear-gradient(100deg, #e0d1ff 0%, #c9d5ff 38%, #b8eadf 72%, #ffd1c2 100%);
   background-clip: text;
   color: transparent;

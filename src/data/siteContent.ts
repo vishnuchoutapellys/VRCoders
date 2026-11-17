@@ -14,6 +14,9 @@ import nsrLogo from "../assets/client-nsr.webp";
 import rudraSolarLogo from "../assets/client-rudra.webp";
 import weddingLogo from "../assets/client-wedding.webp";
 import primaSoftLogo from "../assets/client-primasoft.webp";
+import vishnuPortrait from "../assets/vishnu.jpeg";
+import krishnaPortrait from "../assets/krishna.jpeg";
+import vyasPortrait from "../assets/vyas.jpeg";
 
 export const clients = [
   { name: "NSR Impulse", logo: nsrLogo },
@@ -69,9 +72,24 @@ export const reasons = [
 ];
 
 export const leadership = [
-  { name: "Vishnu Choutapelly", role: "Founder & CEO" },
-  { name: "Tadepu Krishna", role: "Co-Founder & COO" },
-  { name: "Narayan Dath Vyas", role: "Co-Founder & CTO" },
+  {
+    name: "Vishnu Choutapelly",
+    role: "Founder & CEO",
+    description: "Sets the company’s direction, leads its growth, and builds lasting client partnerships.",
+    image: vishnuPortrait,
+  },
+  {
+    name: "Tadepu Krishna",
+    role: "Co-Founder & COO",
+    description: "Leads day-to-day operations and helps turn company plans into reliable delivery.",
+    image: krishnaPortrait,
+  },
+  {
+    name: "Narayan Dath Vyas",
+    role: "Co-Founder & CTO",
+    description: "Guides technology strategy and the engineering decisions behind client solutions.",
+    image: vyasPortrait,
+  },
 ];
 
 export const supportServices = [

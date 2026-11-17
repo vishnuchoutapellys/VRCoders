@@ -185,9 +185,14 @@ export default function HomePage() {
             {leadership.map((person, index) => (
               <Reveal key={person.name} delay={index * 0.08}>
                 <article className="leadership-card">
-                  <span className="leadership-number" aria-hidden="true">0{index + 1}</span>
-                  <h3>{person.name}</h3>
-                  <p>{person.role}</p>
+                  <div className="leadership-copy">
+                    <h3>{person.name}</h3>
+                    <p className="leadership-description">{person.description}</p>
+                  </div>
+                  <div className="leadership-profile">
+                    <img className="leadership-portrait" src={person.image} alt={person.name} loading="lazy" decoding="async" />
+                    <p className="leadership-role">{person.role}</p>
+                  </div>
                 </article>
               </Reveal>
             ))}
