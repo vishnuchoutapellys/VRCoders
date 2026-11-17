@@ -11,7 +11,7 @@ export default function Footer() {
           </Link>
 
           <a className="footer-contact-link" href="tel:+919014249898"><Phone size={15} /> +91 90142 49898</a>
-          <p className="footer-address"><MapPin size={15} />403, Padmavathi Residency Block-A<br />Lahari Green Park<br />Hyderabad - 500089</p>
+          <p className="footer-address"><MapPin size={15} />Padmavathi Residency,<br />Near 2nd Circle, <br />Lahari Green Park,<br />Hyderabad - 500089.</p>
         </div>
         <div className="footer-links">
           <p className="footer-label">Explore Links</p>

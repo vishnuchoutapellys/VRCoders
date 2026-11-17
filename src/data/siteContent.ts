@@ -60,7 +60,14 @@ export const technologyGroups = [
   // { name: "AI", technologies: ["Generative AI", "LLM", "RAG", "AI Agents"] },
 ];
 
-export const processSteps = ["Discover", "Design", "Build", "Test", "Launch", "Support"];
+export const processSteps = [
+  { title: "Discover", description: "We learn your goals, users, and the challenges to solve." },
+  { title: "Design", description: "We shape a clear plan and experience around your needs." },
+  { title: "Build", description: "We develop your solution in focused, visible steps." },
+  { title: "Test", description: "We check quality, usability, and reliability before release." },
+  { title: "Launch", description: "We prepare your product for a smooth release." },
+  { title: "Support", description: "We maintain and improve your product as you grow." },
+];
 
 export const reasons = [
   "Technology Agnostic",

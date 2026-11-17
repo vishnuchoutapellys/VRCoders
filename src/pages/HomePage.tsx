@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Check, Sparkles } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -33,14 +33,18 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="eyebrow"><span className="live-dot" /> Independent technology partner</p>
-            <h1 style={{ width: "110%" }}>BUILD <span>SCALE</span><br />TRANSFORM</h1>
-            <p className="hero-description">We engineer digital products that help businesses move faster.</p>
+            <p className="eyebrow"><span className="live-dot" /> Build. Scale. Transform.</p>
+            <h1>Your next idea,<br />built to <span>grow.</span></h1>
+            <p className="hero-description">From web and mobile products to custom software and practical AI, we build around your business and support you beyond launch.</p>
             <div className="hero-actions">
-              <Link className="button" to="/contact">Start Your Project <ArrowUpRight size={17} /></Link>
+              <Link className="button" to="/contact">Discuss Your Project <ArrowUpRight size={17} /></Link>
               <a className="button button--quiet" href="#services">Explore Services <ArrowDown size={16} /></a>
             </div>
-            <div className="hero-footnote"><span>01</span><span>From first idea to long-term support</span></div>
+            <div className="hero-assurances" aria-label="How we work">
+              <span><Check size={14} aria-hidden="true" />Business-first thinking</span>
+              <span><Check size={14} aria-hidden="true" />Clear, collaborative delivery</span>
+              <span><Check size={14} aria-hidden="true" />Support beyond launch</span>
+            </div>
           </motion.div>
           <motion.div
             className="hero-visual"
@@ -53,10 +57,14 @@ export default function HomePage() {
             <div className="visual-ring visual-ring--middle" />
             <div className="visual-ring visual-ring--inner" />
             <div className="visual-core"><span style={{ width: 35 }}>VR</span><i /></div>
-            <div className="visual-node visual-node--one"><span className="node-dot" />Idea</div>
+            <div className="visual-node visual-node--one"><span className="node-dot" />Your idea</div>
             <div className="visual-node visual-node--two"><span className="node-dot" />Engineering</div>
-            <div className="visual-node visual-node--three"><span className="node-dot" />Impact</div>
-            <div className="visual-caption">DESIGNED TO MOVE BUSINESS FORWARD</div>
+            <div className="visual-node visual-node--three"><span className="node-dot" />Long-term support</div>
+            <div className="visual-capability-card">
+              <span className="visual-capability-label"><Sparkles size={12} /> One partner, end to end</span>
+              <div><span>Web</span><span>Mobile</span><span>AI</span></div>
+            </div>
+            <div className="visual-caption">FROM FIRST IDEA TO WHAT’S NEXT</div>
           </motion.div>
         </div>
         <div className="hero-bottom container"><span>HYDERABAD · WORKING EVERYWHERE</span><span>SCROLL TO EXPLORE <ArrowDown size={13} /></span></div>
@@ -133,8 +141,14 @@ export default function HomePage() {
           <Reveal><SectionHeading eyebrow="A clear path forward" title="FROM IDEA TO PRODUCTION" description="A collaborative process that keeps decisions visible and progress moving." /></Reveal>
           <div className="process-track">
             {processSteps.map((step, index) => (
-              <Reveal key={step} delay={index * 0.055}>
-                <div className="process-step"><span className="process-number">0{index + 1}</span><span/><h3>{step}</h3></div>
+              <Reveal key={step.title} delay={index * 0.055}>
+                <article className="process-step">
+                  <div className="process-step-top">
+                    <h3>{step.title}</h3>
+                    <span className="process-point" aria-hidden="true" />
+                  </div>
+                  <p>{step.description}</p>
+                </article>
               </Reveal>
             ))}
           </div>
