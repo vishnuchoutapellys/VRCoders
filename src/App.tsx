@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useReducedMotion } from "framer-motion";
+import { useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -8,17 +7,14 @@ import HomePage from "./pages/HomePage";
 
 function RouteEffects() {
   const { pathname, hash } = useLocation();
-  const reduceMotion = useReducedMotion();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (hash) {
-      requestAnimationFrame(() => {
-        document.querySelector(hash)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-      });
+      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ behavior: "instant", block: "start" });
     } else {
-      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
-  }, [pathname, hash, reduceMotion]);
+  }, [pathname, hash]);
 
   return null;
 }

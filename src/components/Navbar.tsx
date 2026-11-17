@@ -40,7 +40,7 @@ export default function Navbar() {
           <img className="brand-logo" src={logo} alt="VR Coders Consulting" />
         </Link>
         <div className="desktop-nav" style={{ marginLeft: "20%" }}>
-          <Link to="/">Home</Link>
+          <a href="/">Home</a>
           {links.map((link) => <Link key={link.label} to={link.href}>{link.label}</Link>)}
           <Link to="/contact">Contact</Link>
         </div>
@@ -68,10 +68,10 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.24 }}
           >
-            <Link to="/">Home</Link>
-            {links.map((link) => <Link key={link.label} to={link.href}>{link.label}</Link>)}
-            <Link to="/contact">Contact</Link>
-            <Link className="button mobile-project-link" to="/contact">Start a Project <ArrowUpRight size={16} /></Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+            {links.map((link) => <Link key={link.label} to={link.href} onClick={() => setMenuOpen(false)}>{link.label}</Link>)}
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+            <Link className="button mobile-project-link" to="/contact" onClick={() => setMenuOpen(false)}>Start a Project <ArrowUpRight size={16} /></Link>
           </motion.div>
         )}
       </AnimatePresence>

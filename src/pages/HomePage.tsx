@@ -105,7 +105,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad ai-section">
+      <section className="section-pad ai-section" id="solutions">
         <div className="container ai-layout">
           <Reveal>
             <p className="eyebrow">Applied intelligence</p>
