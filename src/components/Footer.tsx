@@ -1,7 +1,6 @@
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/vr-coders-logo.webp";
-
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -10,6 +9,7 @@ export default function Footer() {
           <Link className="brand" to="/">
             <img className="brand-logo" src={logo} alt="VR Coders Consulting" />
           </Link>
+
           <a className="footer-contact-link" href="tel:+919014249898"><Phone size={15} /> +91 90142 49898</a>
           <p className="footer-address"><MapPin size={15} />403, Padmavathi Residency Block-A<br />Lahari Green Park<br />Hyderabad - 500089</p>
         </div>
