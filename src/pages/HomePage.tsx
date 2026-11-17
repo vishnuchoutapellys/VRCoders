@@ -57,9 +57,9 @@ export default function HomePage() {
             <div className="visual-ring visual-ring--outer" />
             <div className="visual-ring visual-ring--middle" />
             <div className="visual-ring visual-ring--inner" />
-            <div className="visual-core"><span style={{ width: 35 }}>VR</span><i /></div>
+            <div className="visual-core"><span className="visual-mark" style={{color: "#bcbcbc"}}>VR</span><span className="visual-core-label">CODERS</span><i /></div>
             <div className="visual-node visual-node--one"><span className="node-dot" />Your idea</div>
-            <div className="visual-node visual-node--two"><span className="node-dot" />Engineering</div>
+            <div className="visual-node visual-node--two"><span className="node-dot" />Our Development</div>
             <div className="visual-node visual-node--three"><span className="node-dot" />Long-term support</div>
             <div className="visual-capability-card">
               <span className="visual-capability-label"><Sparkles size={12} /> One partner, end to end</span>
@@ -116,7 +116,7 @@ export default function HomePage() {
           <Reveal delay={0.12}>
             <div className="ai-visual">
               <div className="ai-lines" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div>
-              <div className="ai-center"><img className="ai-center-logo" src={aiLogo} alt="VR Coders AI" /></div>
+              <div className="ai-center"><img className="ai-center-logo" style={{border: "2px solid #d92060"}} src={aiLogo} alt="VR Coders AI" /></div>
               {aiCapabilities.map((capability, index) => <div className={`ai-node ai-node--${index + 1}`} key={capability}><span />{capability}</div>)}
               <div className="ai-visual-note">BUILT AROUND YOUR BUSINESS</div>
             </div>

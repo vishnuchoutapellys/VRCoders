@@ -87,14 +87,15 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .hero-assurances { display: grid; grid-template-columns: repeat(2, max-content); gap: 11px 18px; margin-top: 24px; border-top: 1px solid rgba(220, 207, 250, .14); padding-top: 17px; color: #d2cedc; font-size: 10px; }
 .hero-assurances span { display: inline-flex; align-items: center; gap: 7px; }
 .hero-assurances svg { flex: 0 0 auto; color: var(--pastel-mint); }
-.hero-visual { position: relative; height: 480px; isolation: isolate; }
+.hero-visual { position: relative; width: min(100%, 520px); aspect-ratio: 1; justify-self: center; isolation: isolate; }
 .hero-visual::before { position: absolute; z-index: -1; inset: 3% 2%; border: 1px solid rgba(220, 207, 250, .08); border-radius: 50%; background: radial-gradient(ellipse at 52% 47%, rgba(201, 183, 255, .16), rgba(155, 183, 255, .06) 27%, transparent 66%); box-shadow: inset 0 0 90px rgba(201, 183, 255, .035), 0 0 100px rgba(151, 155, 236, .07); content: ""; }
 .visual-ring { position: absolute; z-index: 0; top: 50%; left: 50%; border: 1px solid rgba(195, 184, 255, .17); border-radius: 50%; transform: translate(-50%, -50%); }
-.visual-ring--outer { width: min(410px, 90%); aspect-ratio: 1; box-shadow: inset 0 0 80px rgba(139, 151, 236, .06), 0 0 90px rgba(153, 144, 231, .08); animation: slow-spin 60s linear infinite; }
-.visual-ring--middle { width: min(310px, 68%); aspect-ratio: 1; border-style: dashed; border-color: rgba(185, 221, 255, .24); animation: slow-spin 48s linear infinite reverse; }
-.visual-ring--inner { width: min(215px, 48%); aspect-ratio: 1; border-color: rgba(213, 198, 255, .24); box-shadow: 0 0 70px rgba(187, 169, 255, .17); }
-.visual-core { position: absolute; z-index: 2; top: 50%; left: 50%; display: grid; width: 126px; height: 126px; place-items: center; border: 1px solid rgba(231, 220, 255, .65); border-radius: 34px; background: linear-gradient(145deg, rgba(57, 48, 82, .96), rgba(24, 28, 48, .96) 58%, rgba(19, 34, 48, .96)); box-shadow: 0 0 0 8px rgba(210, 196, 255, .045), 0 0 75px rgba(184, 169, 255, .28), inset 0 1px 0 rgba(255,255,255,.22); transform: translate(-50%, -50%) rotate(-8deg); }
-.visual-core span { display: inline-block; background: linear-gradient(110deg, #ff668c 0%, #ffc86b 18%, #d5f86b 34%, #4ce2c1 51%, #58bfff 68%, #a28aff 84%, #ff82d2 100%); background-size: 220% 220%; background-clip: text; color: transparent; filter: drop-shadow(0 0 13px rgba(111, 209, 245, .42)); font-family: "Manrope", sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -.11em; transform-origin: center; animation: visual-mark-spin 12s linear infinite, visual-mark-color 5s ease-in-out infinite alternate; -webkit-background-clip: text; }
+.visual-ring--outer { width: min(410px, 82%); aspect-ratio: 1; box-shadow: inset 0 0 80px rgba(139, 151, 236, .06), 0 0 90px rgba(153, 144, 231, .08); animation: slow-spin 60s linear infinite; }
+.visual-ring--middle { width: min(310px, 64%); aspect-ratio: 1; border-style: dashed; border-color: rgba(185, 221, 255, .24); animation: slow-spin 48s linear infinite reverse; }
+.visual-ring--inner { width: min(215px, 44%); aspect-ratio: 1; border-color: rgba(213, 198, 255, .24); box-shadow: 0 0 70px rgba(187, 169, 255, .17); }
+.visual-core { position: absolute; z-index: 2; top: 50%; left: 50%; display: flex; width: 126px; height: 126px; flex-direction: column; align-items: center; justify-content: center; gap: 2px; border: 1px solid rgba(231, 220, 255, .65); border-radius: 34px; background: linear-gradient(145deg, rgba(57, 48, 82, .96), rgba(24, 28, 48, .96) 58%, rgba(19, 34, 48, .96)); box-shadow: 0 0 0 8px rgba(210, 196, 255, .045), 0 0 75px rgba(184, 169, 255, .28), inset 0 1px 0 rgba(255,255,255,.22); transform: translate(-50%, -50%); }
+.visual-core .visual-mark { display: inline-block; background: linear-gradient(110deg, #d6ccff 8%, #a8e7ed 52%, #b8c5ff 94%); background-clip: text; color: transparent; filter: drop-shadow(0 0 13px rgba(143, 204, 241, .35)); font-family: "Manrope", sans-serif; font-size: 42px; font-weight: 800; letter-spacing: -.1em; line-height: 1; -webkit-background-clip: text; }
+.visual-core .visual-core-label { color: rgba(224, 222, 243, .72); font-size: 8px; font-weight: 700; letter-spacing: .24em; line-height: 1; }
 .visual-core i { position: absolute; top: 12px; right: 12px; width: 6px; height: 6px; border-radius: 50%; background: #9bafff; box-shadow: 0 0 12px #9bafff; }
 .visual-node { position: absolute; z-index: 3; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(220, 207, 250, .24); border-radius: 7px; padding: 10px 13px; background: linear-gradient(145deg, rgba(30, 30, 48, .94), rgba(18, 19, 31, .88)); color: #e4e0ed; font-size: 10px; box-shadow: 0 14px 36px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.08); backdrop-filter: blur(12px); animation: node-bob 6s ease-in-out infinite; }
 .node-dot { width: 5px; height: 5px; border-radius: 50%; background: #a6b1ff; box-shadow: 0 0 8px #a6b1ff; }
@@ -308,7 +309,6 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 @media (min-width: 1600px) {
   .container { width: min(1280px, calc(100% - 100px)); }
   .hero { min-height: 780px; }
-  .hero-visual { transform: scale(1.08); }
 }
 @media (max-width: 1100px) {
   .desktop-nav { gap: 13px; }
@@ -331,7 +331,7 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
   .hero { min-height: 660px; }
   .hero-content { grid-template-columns: 1fr .85fr; gap: 0; padding-top: 75px; }
   .hero h1 { font-size: clamp(46px, 6.5vw, 58px); }
-  .hero-visual { height: 390px; transform: scale(.82); transform-origin: center; }
+  .hero-visual { width: 100%; max-width: 390px; height: 390px; transform: scale(.82); transform-origin: center; }
   .hero-orbit--one { right: -10%; }
   .hero-orbit--two { right: -18%; }
   .hero-assurances { gap: 10px 12px; font-size: 9px; }
@@ -369,13 +369,15 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
   .visual-ring--middle { width: 158px; height: 158px; }
   .visual-ring--inner { width: 108px; height: 108px; }
   .visual-core { width: 68px; height: 68px; border-radius: 19px; }
-  .visual-core span { font-size: 22px; }
+  .visual-core .visual-mark { font-size: 24px; }
+  .visual-core .visual-core-label { font-size: 6px; }
   .visual-core i { top: 8px; right: 8px; }
   .visual-node { gap: 5px; padding: 7px 8px; font-size: 8px; }
+  .visual-node--two { top: 12%; right: -12%; white-space: nowrap; }
   .visual-caption { font-size: 6px; }
   .hero-bottom { bottom: 17px; font-size: 7px; }
   .hero-bottom span:first-child { max-width: 52%; }
-  .hero-orbit--one { top: 49%; right: -35%; width: 300px; height: 300px; }
+  .hero-orbit--one { top: 55%; right: -1%; width: 300px; height: 300px; }
   .hero-orbit--two { top: 45%; right: -47%; width: 400px; height: 400px; }
   .clients-section .container { gap: 20px; }
   .client-marquee-track { animation-duration: 27s; }
@@ -489,7 +491,7 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 }
 .hero-description { color: #c1bece; }
 .visual-core { border-color: rgba(219, 205, 255, .68); background: linear-gradient(145deg, rgba(49, 42, 75, .96), rgba(24, 24, 42, .94)); box-shadow: 0 0 70px rgba(196, 177, 255, .18), inset 0 1px 0 rgba(255,255,255,.18); }
-.visual-core span { background-image: linear-gradient(110deg, #ffd8c5 0%, #fff0c4 18%, #d9f3c9 34%, #c3f1e8 51%, #c4e7ff 68%, #d4caff 84%, #ffd4e5 100%); filter: drop-shadow(0 0 13px rgba(199, 217, 255, .44)); }
+.visual-core .visual-mark { background-image: linear-gradient(110deg, #d6ccff 8%, #a8e7ed 52%, #b8c5ff 94%); }
 .visual-node, .ai-node { border-color: rgba(220, 207, 250, .22); background: rgba(20, 20, 33, .92); }
 .clients-section, .services-section { background: #10111b; }
 .clients-intro h2 span { color: #c8c0d7; }
@@ -563,9 +565,6 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .client-marquee-track { animation: none; }
   .client-marquee-group[aria-hidden="true"] { display: none; }
-  .visual-core span { animation: none; }
 }
 
 @keyframes client-marquee { to { transform: translateX(-50%); } }
-@keyframes visual-mark-spin { to { transform: rotate(360deg); } }
-@keyframes visual-mark-color { to { background-position: 100% 50%; } }
