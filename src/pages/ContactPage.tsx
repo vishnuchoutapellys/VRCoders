@@ -17,7 +17,8 @@ export default function ContactPage() {
             <p className="eyebrow">Talk to our team</p>
             <h2>Good conversations<br />start with a hello.</h2>
             <a className="contact-detail" href="tel:+919014249898"><span><Phone size={17} /></span><div><small>Call us</small><strong>+91 90142 49898</strong></div></a>
-            <div className="contact-detail"><span><MapPin size={17} /></span><div><small>Visit us</small><strong>403, Padmavathi Residency Block-A<br />Lahari Green Park<br />Bowrampet, Hyderabad<br />Telangana - 500089, India</strong></div></div>
+            <div className="contact-detail"><span><MapPin size={17} /></span><div><small>Visit us</small><strong>Padmavathi Residency,<br />Near 2nd Circle, <br />Lahari Green Park,<br />Hyderabad - 500089.</strong></div></div>
+
             <div className="contact-aside-note"><span className="live-dot" />Based in Hyderabad. Ready to work wherever you are.</div>
           </div>
           <div className="contact-form-panel">
