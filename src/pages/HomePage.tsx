@@ -205,7 +205,7 @@ export default function HomePage() {
                     <p className="leadership-description">{person.description}</p>
                   </div>
                   <div className="leadership-profile">
-                    <img className="leadership-portrait" src={person.image} alt={person.name} loading="lazy" decoding="async" />
+                    {/* <img className="leadership-portrait" src={person.image} alt={person.name} loading="lazy" decoding="async" /> */}
                     <p className="leadership-role">{person.role}</p>
                   </div>
                 </article>

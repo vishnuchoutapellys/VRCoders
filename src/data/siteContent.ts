@@ -81,8 +81,8 @@ export const reasons = [
 
 export const leadership = [
   {
-    name: "Vishnu Choutapelly",
-    role: "Founder & CEO",
+    name: "Rajani Choutapelly",
+    role: "Founder,CEO  & MD",
     description: "Sets the company’s direction, leads its growth, and builds lasting client partnerships.",
     image: vishnuPortrait,
   },
@@ -93,7 +93,7 @@ export const leadership = [
     image: krishnaPortrait,
   },
   {
-    name: "Narayan Dath Vyas",
+    name: "Ganesh  Vyas",
     role: "Co-Founder & CTO",
     description: "Guides technology strategy and the engineering decisions behind client solutions.",
     image: vyasPortrait,
