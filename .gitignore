@@ -8,3 +8,5 @@ coverage/
 *.tsbuildinfo
 .DS_Store
 src/assets/*.png
+!src/assets/AI.png
+!src/assets/GPR.png
