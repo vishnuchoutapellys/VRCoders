@@ -225,8 +225,9 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .reason-icon { display: grid; width: 24px; height: 24px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(150, 167, 255, .23); border-radius: 50%; color: #aebaff; }
 .reason-number { margin-left: auto; color: #747b8e; font-size: 9px; }
 .leadership-section { border-top: 1px solid var(--line); background: #090b12; }
-.leadership-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.leadership-card { display: grid; min-height: 0; grid-template-columns: minmax(0, 1fr) 112px; align-items: start; gap: 14px; border: 1px solid var(--line); border-radius: 6px; padding: 18px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); transition: transform .22s ease, border-color .22s ease, background .22s ease; }
+.leadership-grid { display: grid; grid-auto-rows: 1fr; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.leadership-grid > * { height: 100%; }
+.leadership-card { display: grid; width: 100%; height: 100%; min-height: 0; grid-template-columns: minmax(0, 1fr) 112px; align-items: start; gap: 14px; border: 1px solid var(--line); border-radius: 6px; padding: 18px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); transition: transform .22s ease, border-color .22s ease, background .22s ease; }
 .leadership-card:hover { transform: translateY(-3px); border-color: rgba(213, 198, 255, .4); background: linear-gradient(145deg, rgba(205, 191, 255, .075), rgba(255,255,255,.01)); }
 .leadership-copy { min-width: 0; }
 .leadership-profile { display: flex; min-width: 0; flex-direction: column; align-items: center; gap: 10px; }
@@ -423,7 +424,9 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
   .work-placeholder { margin-top: 22px; padding: 16px 0; font-size: 8px; }
   .why-section h2 { font-size: clamp(32px, 9vw, 36px); line-height: 1.08; }
   .leadership-grid { grid-template-columns: 1fr; gap: 10px; }
-  .leadership-card { grid-template-columns: minmax(0, 1fr) 106px; gap: 10px; padding: 15px; }
+  .leadership-grid { grid-auto-rows: auto; }
+  .leadership-grid > * { height: auto; }
+  .leadership-card { height: auto; grid-template-columns: minmax(0, 1fr) 106px; gap: 10px; padding: 15px; }
   .leadership-profile { gap: 8px; }
   .leadership-portrait { width: 68px; height: 68px; }
   .leadership-card h3 { margin-bottom: 8px; font-size: 15px; }
