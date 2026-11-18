@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/vr-coders-logo.webp";
 
-const visitorCountEndpoint = "https://counterapi.com/api/vr-coders-consulting/view/website-visitors";
+const visitorCounterKey = "vrcoders-consulting-live-site-visitors-2026";
 const visitorSessionKey = "vr-coders-visitor-counted";
+const visitorCountStart = 1000;
 
 export default function Footer() {
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
@@ -24,10 +25,8 @@ export default function Footer() {
       // Storage can be unavailable in privacy-restricted browsing contexts.
     }
 
-    const endpoint = new URL(visitorCountEndpoint);
-    endpoint.searchParams.set("unique", "true");
-    endpoint.searchParams.set("startNumber", "1000");
-    if (alreadyCounted) endpoint.searchParams.set("readOnly", "true");
+    const action = alreadyCounted ? "get" : "hit";
+    const endpoint = `https://countapi.mileshilliard.com/api/v1/${action}/${visitorCounterKey}`;
 
     fetch(endpoint)
       .then((response) => {
@@ -35,8 +34,10 @@ export default function Footer() {
         return response.json() as Promise<{ value?: number | string }>;
       })
       .then((data) => {
-        const count = Number(data.value);
-        if (active && Number.isFinite(count) && count >= 0) setVisitorCount(count);
+        const trackedVisits = Number(data.value);
+        if (active && Number.isFinite(trackedVisits) && trackedVisits >= 0) {
+          setVisitorCount(Math.max(visitorCountStart, visitorCountStart + trackedVisits - 1));
+        }
       })
       .catch(() => {
         if (!alreadyCounted) {
