@@ -264,6 +264,8 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; }
 .footer-links a:hover { color: #fff; }
 .footer-links a:hover svg { opacity: 1; }
 .footer-bottom { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 12px; padding-bottom: 13px; color: #737989; font-size: 9px; }
+.footer-meta { display: inline-flex; align-items: center; gap: 14px; }
+.visitor-count { color: #bcb5cc; white-space: nowrap; }
 
 /* Contact */
 .contact-page { min-height: 80vh; padding: 125px 0 76px; background: radial-gradient(ellipse at 9% 12%, rgba(45, 54, 117, .17), transparent 34%), #090b12; }
